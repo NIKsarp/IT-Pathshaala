@@ -142,11 +142,14 @@ const container_8 = (...items) => {
 
   items.forEach(([title, href]) => {
     const item = createElement(`li`, `item`);
-    const itemLink = createElement(`a`, `item-link`, title);
-
-    // --------------------------------------------
-    // Set attributes
-    itemLink.href = `https://q3schools.com/python-project-${href}/`;
+    const itemLink = createElement(
+      `a`,
+      [
+        [`class`, `item-link`],
+        [`href`, `https://q3schools.com/python-project-${href}/`],
+      ],
+      title
+    );
 
     // --------------------------------------------
     // Append elements
