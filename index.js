@@ -51,17 +51,22 @@ const imageContainer = (containerId, [...attribute]) => {
   const container3 = document.getElementById(containerId);
 
   attribute.forEach(([src, href, title]) => {
-    const figure = createElement(`figure`, `figure`);
-    const anchor = createElement(`a`, `anchor`);
-    const figureImg = createElement(`img`, `figure-img`);
-    const figCaption = createElement(`figcaption`, `figure-caption`, title);
-
-    // --------------------------------------------
-    // Set attributes
-    figureImg.src = src;
-    figureImg.alt = title;
-    figureImg.title = title;
-    anchor.href = href;
+    const figure = createElement(`figure`, [[`class`, `figure`]]);
+    const anchor = createElement(`a`, [
+      [`class`, `anchor`],
+      [`href`, href],
+    ]);
+    const figureImg = createElement(`img`, [
+      [`class`, `figure-img`],
+      [`src`, src],
+      [`alt`, title],
+      [`title`, title],
+    ]);
+    const figCaption = createElement(
+      `figcaption`,
+      [[`class`, `figure-caption`]],
+      title
+    );
 
     // --------------------------------------------
     // Append elements
