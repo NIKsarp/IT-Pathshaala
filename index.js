@@ -179,13 +179,12 @@ const container_9 = (...items) => {
 
   items.forEach(([src, alt]) => {
     const figure = createElement(`figure`, `figure`);
-    const figureImg = createElement(`img`, `figure-img`);
-
-    // --------------------------------------------
-    // Set attributes
-    figureImg.src = src;
-    figureImg.alt = alt;
-    figureImg.title = alt;
+    const figureImg = createElement(`img`, [
+      [`class`, `figure-img`],
+      [`src`, src],
+      [`alt`, alt],
+      [`title`, alt],
+    ]);
 
     // --------------------------------------------
     // Append elements
