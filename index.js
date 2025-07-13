@@ -1,14 +1,18 @@
 // --------------------------------------------
 // createElement() Function Start
 
-const createElement = (tagName, className, textContent) => {
+const createElement = (tagName, textContent, ...attribute) => {
   const element = document.createElement(tagName);
-  element.className = className;
-
+  
   if (textContent) {
     element.appendChild(document.createTextNode(textContent));
   }
-
+  
+  // Set each attribute as [name, value]
+  attribute.forEach(([name, value]) => {
+    element.setAttribute(name, value);
+  });
+  
   return element;
 };
 
