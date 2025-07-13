@@ -1,18 +1,18 @@
 // --------------------------------------------
 // createElement() Function Start
 
-const createElement = (tagName, textContent, ...attribute) => {
+const createElement = (tagName, [...attribute], textContent) => {
   const element = document.createElement(tagName);
-  
-  if (textContent) {
-    element.appendChild(document.createTextNode(textContent));
-  }
-  
+
   // Set each attribute as [name, value]
   attribute.forEach(([name, value]) => {
     element.setAttribute(name, value);
   });
-  
+
+  if (textContent) {
+    element.appendChild(document.createTextNode(textContent));
+  }
+
   return element;
 };
 
@@ -24,7 +24,11 @@ const container_2 = (...items) => {
   const container2 = document.getElementById(`container-2`);
 
   items.forEach(([title]) => {
-    const containerItem = createElement(`div`, `container-item`, title);
+    const containerItem = createElement(
+      `div`,
+      [[`class`, `container-item`]],
+      title
+    );
 
     // --------------------------------------------
     // Append elements
