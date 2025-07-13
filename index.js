@@ -19,7 +19,7 @@ const createElement = (tagName, className, textContent) => {
 const container_2 = (...items) => {
   const container2 = document.getElementById(`container-2`);
 
-  items.map(([title]) => {
+  items.forEach(([title]) => {
     const containerItem = createElement(`div`, `container-item`, title);
 
     // --------------------------------------------
@@ -42,7 +42,7 @@ container_2(
 const imageContainer = (containerId, [...attribute]) => {
   const container3 = document.getElementById(containerId);
 
-  attribute.map(([src, href, title]) => {
+  attribute.forEach(([src, href, title]) => {
     const figure = createElement(`figure`, `figure`);
     const anchor = createElement(`a`, `anchor`);
     const figureImg = createElement(`img`, `figure-img`);
@@ -127,7 +127,7 @@ imageContainer(`container-5`, [
 const container_8 = (...items) => {
   const container8 = document.getElementById(`container-8`);
 
-  items.map(([title, href]) => {
+  items.forEach(([title, href]) => {
     const item = createElement(`li`, `item`);
     const itemLink = createElement(`a`, `item-link`, title);
 
@@ -161,7 +161,7 @@ container_8(
 const container_9 = (...items) => {
   const container9 = document.getElementById(`contaiener-9`);
 
-  items.map(([src, alt]) => {
+  items.forEach(([src, alt]) => {
     const figure = createElement(`figure`, `figure`);
     const figureImg = createElement(`img`, `figure-img`);
 
