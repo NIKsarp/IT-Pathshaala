@@ -1,5 +1,6 @@
 /* -------------------------------------------- */
-/* body */
+/* HTML Body Start */
+
 :root {
   --gap: 0.75rem;
   --white: #fffffe;
@@ -53,8 +54,10 @@ p {
   background-color: #0c309f60;
 }
 
+/* HTML Body End */
 /* -------------------------------------------- */
-/* header */
+/* Header Start */
+
 .header {
   top: 0;
   z-index: 3;
@@ -114,8 +117,10 @@ p {
   }
 }
 
+/* Header End */
 /* -------------------------------------------- */
-/* container-1 */
+/* Container-1 Start */
+
 .container-1 {
   display: flex;
   flex-direction: column;
@@ -144,8 +149,10 @@ p {
   z-index: -1;
 }
 
+/* Container-1 End */
 /* -------------------------------------------- */
-/* container-2 */
+/* Container-2 Start */
+
 .container-2 {
   display: flex;
   flex-wrap: wrap;
@@ -163,8 +170,10 @@ p {
   border-radius: var(--gap);
 }
 
+/* Container-2 End */
 /* -------------------------------------------- */
-/* container-3 */
+/* Container-3 Start */
+
 .container-3,
 .image-container {
   display: flex;
@@ -218,8 +227,10 @@ p {
   opacity: 1;
 }
 
+/* Container-3 End */
 /* --------------------------------------------
-/* container-4 */
+/* Container-4 Start */
+
 .container-4 {
   display: flex;
   padding: 1rem;
@@ -254,7 +265,9 @@ p {
   }
 }
 
+/* Container-4 End */
 /* -------------------------------------------- */
+/* Official Button Start */
 
 .official-button {
   font-weight: bold;
@@ -270,8 +283,10 @@ p {
   text-shadow: 2px 2px 20px var(--white);
 }
 
+/* Official Button End */
 /* -------------------------------------------- */
-/* container-5 */
+/* Container-5 Start */
+
 .container-5 {
   display: flex;
   gap: var(--gap);
@@ -283,8 +298,10 @@ p {
   font-size: clamp(1rem, 5vw, 2rem);
 }
 
+/* Container-5 End */
 /* -------------------------------------------- */
-/* container-6 */
+/* Container-6 Start */
+
 .container-6 {
   display: flex;
   flex-direction: column;
@@ -308,8 +325,10 @@ p {
   background-color: var(--theme);
 }
 
+/* Container-6 End */
 /* -------------------------------------------- */
-/* container-7 */
+/* Container-7 Start */
+
 .container-7 {
   display: flex;
   text-align: center;
@@ -323,8 +342,10 @@ p {
   color: var(--theme);
 }
 
+/* Container-7 End */
 /* -------------------------------------------- */
-/* container-8 */
+/* Container-8 Start */
+
 .container-8 {
   display: flex;
   /* gap: 1rem; */
@@ -367,8 +388,10 @@ p {
   scale: 1;
 }
 
+/* Container-8 End */
 /* -------------------------------------------- */
-/* container-9 */
+/* Container-9 Start */
+
 .container-9 {
   display: flex;
   padding: var(--gap);
@@ -411,8 +434,10 @@ p {
   }
 }
 
+/* Container-9 End */
 /* -------------------------------------------- */
-/* container-10 */
+/* Container-10 Start */
+
 .container-10 {
   display: flex;
   flex-direction: column;
@@ -453,8 +478,10 @@ p {
   font-size: clamp(1.2rem, 5vw, 2rem);
 }
 
+/* Container-10 End */
 /* -------------------------------------------- */
-/* footer */
+/* Footer Start */
+
 .footer {
   display: flex;
   flex-wrap: wrap;
@@ -489,8 +516,9 @@ p {
   color: #121212;
 }
 
+/* Footer End */
 /* -------------------------------------------- */
-/* copyright */
+/* Copyright Start */
 
 .copyright {
   bottom: 0;
@@ -507,4 +535,5 @@ p {
   }
 }
 
+/* Copyright End */
 /* -------------------------------------------- */
