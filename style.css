@@ -177,19 +177,23 @@ p {
 .container-3 .figure,
 .image-container .figure {
   position: relative;
-  animation: slide 0.1s linear;
-  animation-timeline: view();
-  animation-range: entry 0% cover 50%;
 }
 
 .container-3 .figure .figure-img,
 .image-container .figure .figure-img {
-  border-radius: 1rem;
-  width: clamp(18rem, 10vw, 20rem);
+  scale: 0;
   min-height: 14rem;
-  opacity: 0.8;
-  transition: var(--transition);
   position: relative;
+  border-radius: 1rem;
+  transform: rotateZ(30deg);
+  transition: all 600ms ease;
+  width: clamp(18rem, 10vw, 20rem);
+}
+
+.container-3 .figure .figure-img.show,
+.image-container .figure .figure-img.show {
+  scale: 1;
+  transform: rotateZ(0);
 }
 
 .container-3 .figure .figure-caption,

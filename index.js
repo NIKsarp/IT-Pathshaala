@@ -228,6 +228,28 @@ container_9(
 
 // container_9() Function End
 // --------------------------------------------
+// Observer Start
+
+const observeElements = (entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      console.log(entry.target);
+      entry.target.classList.add("show")
+    }
+    else {
+      entry.target.classList.remove("show")
+    }
+  });
+};
+
+const observer = new IntersectionObserver(observeElements, {});
+
+const todo = Array.from(document.getElementsByClassName(`figure-img`));
+
+todo.forEach((el) => observer.observe(el));
+
+// Observer End
+// --------------------------------------------
 // currentYear Start
 // Display the Current Year
 
