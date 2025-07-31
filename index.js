@@ -61,6 +61,7 @@ const imageContainer = (containerId, [...attribute]) => {
       [`src`, src],
       [`alt`, title],
       [`title`, title],
+      [`loading`, `lazy`],
     ]);
     const figCaption = createElement(
       `figcaption`,
@@ -184,6 +185,7 @@ const container_9 = (...items) => {
       [`src`, src],
       [`alt`, alt],
       [`title`, alt],
+      [`loading`, `lazy`],
     ]);
 
     // --------------------------------------------
