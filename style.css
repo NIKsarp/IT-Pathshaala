@@ -277,9 +277,11 @@ p {
   transition: var(--transition);
   font-size: clamp(1.2rem, 5vw, 2rem);
   width: clamp(16rem, 70vw, 30rem);
+  scale: 1;
 }
 
 .official-button:hover {
+  scale: 1.05;
   text-shadow: 2px 2px 20px var(--white);
 }
 
@@ -381,11 +383,11 @@ p {
 
 .container-8 .project .item {
   transition: var(--transition);
-  scale: 0.8;
 }
 
 .container-8 .project .item:hover {
-  scale: 1;
+  scale: 1.05;
+  transform: translateY(-0.50rem);
 }
 
 /* Container-8 End */
