@@ -141,7 +141,7 @@ const container_8 = (...items) => {
   const container8 = document.getElementById(`container-8`);
 
   items.forEach(([title, href]) => {
-    const item = createElement(`li`, `item`);
+    const item = createElement(`li`, [[`class`, `item`]]);
     const itemLink = createElement(
       `a`,
       [
@@ -178,7 +178,7 @@ const container_9 = (...items) => {
   const container9 = document.getElementById(`contaiener-9`);
 
   items.forEach(([src, alt]) => {
-    const figure = createElement(`figure`, `figure`);
+    const figure = createElement(`figure`, [[`class`, `figure`]]);
     const figureImg = createElement(`img`, [
       [`class`, `figure-img`],
       [`src`, src],
@@ -233,11 +233,9 @@ container_9(
 const observeElements = (entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
-      console.log(entry.target);
-      entry.target.classList.add("show")
-    }
-    else {
-      entry.target.classList.remove("show")
+      entry.target.classList.add("show");
+    } else {
+      entry.target.classList.remove("show");
     }
   });
 };
