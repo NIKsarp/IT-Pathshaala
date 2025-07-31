@@ -2,16 +2,23 @@
 /* HTML Body Start */
 
 :root {
+  /* Layout and spacing */
   --gap: 0.75rem;
+
+  /* Color */
   --white: #fffffe;
   --black: #121212;
+  --theme: #0c309f;
   /* --theme: #8282ee; */
   --secondary-text: #444444;
-  --theme: #0c309f;
-  --transition: all 0.3s ease;
-  --blur: blur(1rem) saturate(180%);
+
+  /* Typography */
   --font-primary:  "Poppins", sans-serif;
   --font-secondary: "bree serif";
+  
+  /* Effects */
+  --transition: all 0.3s ease;
+  --blur: blur(1rem) saturate(180%);
   --shadow: 0 1px 2px #12121230, inset 1px 2px 3px #fffffe30;
 }
 
