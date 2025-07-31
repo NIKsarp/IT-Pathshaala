@@ -109,6 +109,25 @@ imageContainer(`container-3`, [
 
 // container-3 End
 // --------------------------------------------
+// container-6 Start
+
+const maxValue = 6718;
+let startValue = maxValue - 2000;
+const val = document.getElementById(`val`);
+
+const loading = () => {
+  if (startValue < maxValue) {
+    startValue += 4;
+    val.innerText = startValue;
+  } else {
+    clearInterval(this);
+  }
+};
+
+const CallLoader = setInterval(loading, 1);
+
+// container-6 End
+// --------------------------------------------
 // container-5 Start
 
 imageContainer(`container-5`, [
