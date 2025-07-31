@@ -10,6 +10,8 @@
   --theme: #0c309f;
   --transition: all 0.3s ease;
   --blur: blur(1rem) saturate(180%);
+  --font-primary:  "Poppins", sans-serif;
+  --font-secondary: "bree serif";
   --shadow: 0 1px 2px #12121230, inset 1px 2px 3px #fffffe30;
 }
 
@@ -35,7 +37,7 @@ body {
   background-color: #fffffe;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  font-family: "Poppins", sans-serif;
+  font-family: var(--font-primary);
   background-position: center center;
   /* no-repeat center center/cover fixed; */
   /* background-image: linear-gradient(90deg, #00dbde 0%, #fc00ff 100%); */
@@ -476,7 +478,7 @@ p {
 }
 
 .container-10 .title {
-  font-family: "bree serif";
+  font-family: var(--font-secondary);
   font-size: clamp(1.2rem, 5vw, 2rem);
 }
 
