@@ -1,13 +1,8 @@
 // --------------------------------------------
 // createElement() Function Start
 
-const createElement = (tagName, [...attribute], textContent) => {
+const createElement = (tagName, textContent) => {
   const element = document.createElement(tagName);
-
-  // Set each attribute as [name, value]
-  attribute.forEach(([name, value]) => {
-    element.setAttribute(name, value);
-  });
 
   if (textContent) {
     element.appendChild(document.createTextNode(textContent));
@@ -19,23 +14,25 @@ const createElement = (tagName, [...attribute], textContent) => {
 // createElement() Function End
 // --------------------------------------------
 // container2() Function Start
-
+// ELEMENTS
+// ATTRIBUTES
+// CLASSNAME
+// APPEND ELEMENTS
 const container_2 = (...items) => {
-  const container2 = document.getElementById(`container-2`);
+  const section = document.getElementById(`container-2`);
 
   items.forEach(([title]) => {
-    const containerItem = createElement(
-      `div`,
-      [[`class`, `container-item`]],
-      title
-    );
+    // ELEMENTS
+    const div = createElement(`div`, title);
 
-    // --------------------------------------------
-    // Append elements
-    container2.appendChild(containerItem);
+    // CLASSNAME
+    div.className = `container-item`;
+
+    // APPEND ELEMENTS
+    section.appendChild(div);
   });
 
-  return container2;
+  return section;
 };
 container_2(
   [`Autodesk Academic Partner`],
@@ -48,33 +45,32 @@ container_2(
 // imageContainer() Function Start
 
 const imageContainer = (containerId, [...attribute]) => {
-  const container3 = document.getElementById(containerId);
+  const section = document.getElementById(containerId);
 
   attribute.forEach(([src, href, title]) => {
-    const figure = createElement(`figure`, [[`class`, `figure`]]);
-    const anchor = createElement(`a`, [
-      [`class`, `anchor`],
-      [`href`, href],
-    ]);
-    const figureImg = createElement(`img`, [
-      [`class`, `figure-img`],
-      [`src`, src],
-      [`alt`, title],
-      [`title`, title],
-      [`loading`, `lazy`],
-    ]);
-    const figCaption = createElement(
-      `figcaption`,
-      [[`class`, `figure-caption`]],
-      title
-    );
+    // ELEMENTS
+    const figure = createElement(`figure`);
+    const a = createElement(`a`);
+    const img = createElement(`img`);
+    const figCaption = createElement(`figcaption`, title);
 
-    // --------------------------------------------
-    // Append elements
-    anchor.appendChild(figureImg);
-    anchor.appendChild(figCaption);
-    figure.appendChild(anchor);
-    container3.appendChild(figure);
+    // CLASSNAME
+    figure.className = `figure`;
+    a.className = `anchor`;
+    img.className = `figure-img`;
+    figCaption.className = `figure-caption`;
+
+    // ATTRIBUTES
+    a.href = href;
+    img.src = src;
+    img.alt = title;
+    img.title = title;
+    img.loading = `lazy`;
+
+    // APPEND ELEMENTS
+    a.append(img, figCaption);
+    figure.appendChild(a);
+    section.appendChild(figure);
   });
 
   return containerId;
@@ -158,23 +154,23 @@ imageContainer(`container-5`, [
 // container_8() Function Start
 
 const container_8 = (...items) => {
-  const container8 = document.getElementById(`container-8`);
+  const section = document.getElementById(`container-8`);
 
   items.forEach(([title, href]) => {
-    const item = createElement(`li`, [[`class`, `item`]]);
-    const itemLink = createElement(
-      `a`,
-      [
-        [`class`, `item-link`],
-        [`href`, `https://q3schools.com/python-project-${href}/`],
-      ],
-      title
-    );
+    // ELEMENTS
+    const li = createElement(`li`);
+    const a = createElement(`a`, title);
 
-    // --------------------------------------------
-    // Append elements
-    item.appendChild(itemLink);
-    container8.appendChild(item);
+    // CLASSNAME
+    li.className = `item`;
+    a.className = `item-link`;
+
+    // ATTRIBUTES
+    a.href = `https://q3schools.com/python-project-${href}/`;
+
+    // APPEND ELEMENTS
+    li.appendChild(a);
+    section.appendChild(li);
   });
 
   return items;
@@ -195,22 +191,26 @@ container_8(
 // container_9() Function Start
 
 const container_9 = (...items) => {
-  const container9 = document.getElementById(`contaiener-9`);
+  const section = document.getElementById(`contaiener-9`);
 
   items.forEach(([src, alt]) => {
-    const figure = createElement(`figure`, [[`class`, `figure`]]);
-    const figureImg = createElement(`img`, [
-      [`class`, `figure-img`],
-      [`src`, src],
-      [`alt`, alt],
-      [`title`, alt],
-      [`loading`, `lazy`],
-    ]);
+    // ELEMENTS
+    const figure = createElement(`figure`);
+    const img = createElement(`img`);
 
-    // --------------------------------------------
-    // Append elements
-    figure.appendChild(figureImg);
-    container9.appendChild(figure);
+    // CLASSNAME
+    figure.className = `figure`;
+    img.className = `figure-img`;
+
+    // ATTRIBUTES
+    img.src = src;
+    img.alt = alt;
+    img.title = alt;
+    img.loading = `lazy`;
+
+    // APPEND ELEMENTS
+    figure.appendChild(img);
+    section.appendChild(figure);
   });
 
   return container_9;
