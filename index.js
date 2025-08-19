@@ -14,10 +14,7 @@ const createElement = (tagName, textContent) => {
 // createElement() Function End
 // --------------------------------------------
 // container2() Function Start
-// ELEMENTS
-// ATTRIBUTES
-// CLASSNAME
-// APPEND ELEMENTS
+
 const container_2 = (...items) => {
   const section = document.getElementById(`container-2`);
 
