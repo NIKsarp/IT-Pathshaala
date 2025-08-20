@@ -51,18 +51,18 @@ const imageContainer = (containerId, [...attribute]) => {
     const img = createElement(`img`);
     const figCaption = createElement(`figcaption`, title);
 
-    // CLASSNAME
-    figure.className = `figure`;
-    a.className = `anchor`;
-    img.className = `figure-img`;
-    figCaption.className = `figure-caption`;
-
     // ATTRIBUTES
     a.href = href;
     img.src = src;
     img.alt = title;
     img.title = title;
     img.loading = `lazy`;
+
+    // CLASSNAME
+    figure.className = `figure`;
+    a.className = `anchor`;
+    img.className = `figure-img`;
+    figCaption.className = `figure-caption`;
 
     // APPEND ELEMENTS
     a.append(img, figCaption);
@@ -158,12 +158,12 @@ const container_8 = (...items) => {
     const li = createElement(`li`);
     const a = createElement(`a`, title);
 
+    // ATTRIBUTES
+    a.href = `https://q3schools.com/python-project-${href}/`;
+
     // CLASSNAME
     li.className = `item`;
     a.className = `item-link`;
-
-    // ATTRIBUTES
-    a.href = `https://q3schools.com/python-project-${href}/`;
 
     // APPEND ELEMENTS
     li.appendChild(a);
@@ -195,15 +195,15 @@ const container_9 = (...items) => {
     const figure = createElement(`figure`);
     const img = createElement(`img`);
 
-    // CLASSNAME
-    figure.className = `figure`;
-    img.className = `figure-img`;
-
     // ATTRIBUTES
     img.src = src;
     img.alt = alt;
     img.title = alt;
     img.loading = `lazy`;
+
+    // CLASSNAME
+    figure.className = `figure`;
+    img.className = `figure-img`;
 
     // APPEND ELEMENTS
     figure.appendChild(img);
