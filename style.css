@@ -13,9 +13,9 @@
   --secondary-text: #444444;
 
   /* Typography */
-  --font-primary:  "Poppins", sans-serif;
+  --font-primary: "Poppins", sans-serif;
   --font-secondary: "bree serif";
-  
+
   /* Effects */
   --transition: all 0.3s ease;
   --blur: blur(1rem) saturate(180%);
@@ -95,12 +95,12 @@ p {
 
 /* -------------------------------------------- */
 
-.navbar .navbar-nav {
+.header__navbar-nav {
   gap: 0.5rem;
   display: flex;
 }
 
-.navbar .nav-item {
+.header__nav-item {
   color: #121212;
   cursor: pointer;
   padding: 0.75rem;
@@ -109,11 +109,11 @@ p {
   transition: all 0.3s ease;
 }
 
-.navbar .nav-item>.dropdown-content {
+.header__nav-item>.dropdown-content {
   display: none;
 }
 
-.navbar .nav-item:hover {
+.header__nav-item:hover {
   color: var(--white);
   box-shadow: var(--shadow);
   background-color: var(--theme);
@@ -121,7 +121,7 @@ p {
 
 /* -------------------------------------------- */
 @media only screen and (max-width: 750px) {
-  .header .navbar {
+  .header .header__navbar {
     display: none;
   }
 }
@@ -514,15 +514,15 @@ p {
 
 /* -------------------------------------------- */
 
-.footer .footer-item {
+.footer .footer__item {
   padding: var(--gap);
 }
 
-.footer .footer-link {
+.footer__link {
   color: #383737;
 }
 
-.footer .footer-link:hover {
+.footer__link:hover {
   text-decoration: underline;
   color: #121212;
 }
