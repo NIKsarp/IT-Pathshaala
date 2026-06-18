@@ -95,12 +95,12 @@ p {
 
 /* -------------------------------------------- */
 
-.header__navbar-nav {
+.navbar__nav {
   gap: 0.5rem;
   display: flex;
 }
 
-.header__nav-item {
+.navbar__nav-item {
   color: #121212;
   cursor: pointer;
   padding: 0.75rem;
@@ -109,11 +109,11 @@ p {
   transition: all 0.3s ease;
 }
 
-.header__nav-item>.dropdown-content {
+.navbar__nav-item>.dropdown-content {
   display: none;
 }
 
-.header__nav-item:hover {
+.navbar__nav-item:hover {
   color: var(--white);
   box-shadow: var(--shadow);
   background-color: var(--theme);
@@ -121,7 +121,7 @@ p {
 
 /* -------------------------------------------- */
 @media only screen and (max-width: 750px) {
-  .header .header__navbar {
+  .navbar {
     display: none;
   }
 }
